@@ -59,3 +59,4 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+server '78.153.249.132', port: '22', roles: [:web, :app, :db], primary: true
