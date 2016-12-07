@@ -9,7 +9,6 @@ set :deploy_to, "/local/www/#{fetch(:application)}"
 set :deploy_vie, :remote_cache
 set :ssh_options,     { forward_agent: true, user: fetch(:user)}
 
-
 # set :repo_url,        'git@github.com:serhanus7/rorcap.git'
 # set :application,     'rorcap'
 # set :user,            'deploy'
@@ -82,10 +81,16 @@ namespace :deploy do
     end
   end
 
+  desc "Show done!"
+  task :show_done do
+    puts "DONE"
+  end
+
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
+  after  :finishing,    :show_done
 end
 
 # ps aux | grep puma    # Get puma pid
