@@ -2,7 +2,7 @@
 
 set :scm, :git
 set :application, 'rorcap'
-set :repo_url, 'git@github.com:serhanus7/rorcap.git'
+set :repo_url, 'https://github.com/serhanus7/rorcap.git'
 set :user, 'iserhan'
 set :use_sudo, false
 set :deploy_to, "/local/www/#{fetch(:application)}"
