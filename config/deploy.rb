@@ -1,4 +1,4 @@
-server '10.20.0.2', port: '22', roles: [:web, :app, :db], primary: true
+# server '10.20.0.2', port: '22', roles: [:web, :app, :db], primary: true
 
 set :scm, :git
 set :application, 'rorcap'
