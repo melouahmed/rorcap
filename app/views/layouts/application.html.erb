@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 <h1>Env :</h1>
-  <h2><%= ENV["test_env"]%></h2>
+  <%= debug ENV.to_h.to_yaml %>
   <body>
     <%= yield %>
   </body>
