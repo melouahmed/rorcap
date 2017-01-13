@@ -84,6 +84,7 @@ namespace :deploy do
   desc "Show done!"
   task :show_done do
     puts "DONE"
+    `source ~/.bashrc`
   end
 
   before :starting,     :check_revision
