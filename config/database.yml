@@ -15,4 +15,4 @@ production:
   <<: *default
   database: rorcap
   username: root
-  password: toor
+  password: <%= ENV['DB_PASS'] %>
