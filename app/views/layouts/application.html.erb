@@ -7,7 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-<h1>Welcome to the league of draven ! !</h1>
+<h1>Env :</h1>
+  <h2><%= ENV["test_env"]%></h2>
   <body>
     <%= yield %>
   </body>
