@@ -13,6 +13,6 @@ default: &default
 
 production:
   <<: *default
-  database: rorcap
-  username: root
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DB_USER"] %>
   password: <%= ENV["DB_PASS"] %>
