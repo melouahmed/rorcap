@@ -8,8 +8,14 @@ default: &default
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  pool: 6
+  pool: 16
   host: localhost
+
+development:
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/development.sqlite3
 
 production:
   <<: *default
